@@ -5,6 +5,10 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
+
+title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
+print(title)
+
 def addDot(dot):
     addDotVar = dot.replace("->", "->.")
     return addDotVar
