@@ -59,4 +59,17 @@ def swapValues(newValue, posValue):
         return "".join(newValue)
 
 
+def gotoFucntion(x1):
+    return
+
+def Terminals(gram):
+    return
+
+def nonTerminals(gram):
+    return
+
+def getList(graph, state):
+    return
+
+
 productionRules = []
