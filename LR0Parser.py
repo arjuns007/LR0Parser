@@ -58,7 +58,7 @@ def swapValues(newValue, posValue):
     else:
         return "".join(newValue)
 
-
+#go to function
 def gotoFucntion(var1):
     arr = []
     pos = var1.index(".")
