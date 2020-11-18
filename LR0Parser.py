@@ -36,11 +36,11 @@ def findClosure(gram):
     for i in flag:
         j = i[i.index(".") + 1]
         if j != len(i) - 1:
-            for k in prod:
+            for k in productionRules:
                 if k[0][0] == j and (addDot(k)) not in flag:
                     flag.append(addDot(k))
         else:
-            for k in prod:
+            for k in productionRules:
                 if k[0][0] == j and i not in flag:
                     flag.append(i)
 
@@ -58,3 +58,5 @@ def swapValues(newValue, posValue):
     else:
         return "".join(newValue)
 
+
+productionRules = []
