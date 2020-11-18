@@ -77,8 +77,15 @@ def gotoFucntion(var1):
 def Terminals(gram):
     return
 
+#function to store non terminals
 def nonTerminals(gram):
-    return
+    terms = set()
+    for p in gram:
+        x1 = p.split('->')
+        for t in x1[1].strip():
+            if t.isupper():
+                terms.add(t)
+    return terms
 
 def getList(graph, state):
     return
