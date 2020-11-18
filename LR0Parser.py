@@ -59,8 +59,20 @@ def swapValues(newValue, posValue):
         return "".join(newValue)
 
 
-def gotoFucntion(x1):
-    return
+def gotoFucntion(var1):
+    arr = []
+    pos = var1.index(".")
+    if pos != len(var1) - 1:
+        j = list(var1)
+        k = swapValues(j, pos)
+        if k.index(".") != len(k) - 1:
+            l = findClosure(k)
+            return l
+        else:
+            arr.append(k)
+            return arr
+    else:
+        return var1
 
 def Terminals(gram):
     return
