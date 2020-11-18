@@ -5,6 +5,25 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
+def append_dot(a):
+    jj = a.replace("->", "->.")
+    return jj
+
+
+def closure(a):
+    temp = [a]
+    for it in temp:
+        jj = it[it.index(".") + 1]
+        if jj != len(it) - 1:
+            for k in prod:
+                if k[0][0] == jj and (append_dot(k)) not in temp:
+                    temp.append(append_dot(k))
+        else:
+            for k in prod:
+                if k[0][0] == jj and it not in temp:
+                    temp.append(it)
+
+    return temp
 
 
 if __name__ == '__main__':
@@ -22,6 +41,7 @@ if __name__ == '__main__':
     with open("grammar/" + str(num) + ".txt", 'r') as fp:
         for i in fp.readlines():
             prod.append(i.strip())
+
     prod.insert(0, "X->.S")
     print("---------------------------------------------------------------")
     print("Augmented Grammar")
