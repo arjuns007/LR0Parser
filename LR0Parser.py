@@ -30,3 +30,18 @@ def saveFile(final_string, grammar, name):
     with open("stringParsing/{0}/{1}.txt".format(grammar, name), 'w') as fileParsing:
         fileParsing.write(final_string)
 
+#Function to find closure
+def findClosure(gram):
+    flag = [gram]
+    for i in flag:
+        j = i[i.index(".") + 1]
+        if j != len(i) - 1:
+            for k in prod:
+                if k[0][0] == j and (append_dot(k)) not in flag:
+                    flag.append(append_dot(k))
+        else:
+            for k in prod:
+                if k[0][0] == j and i not in flag:
+                    flag.append(i)
+
+    return flag
