@@ -22,3 +22,18 @@ if __name__ == '__main__':
     with open("grammar/" + str(num) + ".txt", 'r') as fp:
         for i in fp.readlines():
             prod.append(i.strip())
+    prod.insert(0, "X->.S")
+    print("---------------------------------------------------------------")
+    print("Augmented Grammar")
+    print(prod)
+
+    prod_num = {}
+    for i in range(1, len(prod)):
+        prod_num[str(prod[i])] = i
+
+    j = closure("X->.S")
+    set_of_items.append(j)
+
+    state_numbers = {}
+    dfa_prod = {}
+    items = 0
