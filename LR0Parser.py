@@ -5,3 +5,6 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
+def addDot(dot):
+    addDotVar = dot.replace("->", "->.")
+    return addDotVar
