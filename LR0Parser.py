@@ -37,11 +37,24 @@ def findClosure(gram):
         j = i[i.index(".") + 1]
         if j != len(i) - 1:
             for k in prod:
-                if k[0][0] == j and (append_dot(k)) not in flag:
-                    flag.append(append_dot(k))
+                if k[0][0] == j and (addDot(k)) not in flag:
+                    flag.append(addDot(k))
         else:
             for k in prod:
                 if k[0][0] == j and i not in flag:
                     flag.append(i)
 
     return flag
+
+#Fucntion to Swap Values
+def swapValues(newValue, posValue):
+    newValue = list(newValue)
+    temp = newValue[posValue]
+    if posValue != len(newValue):
+        newValue[posValue] = newValue[posValue + 1]
+        newValue[posValue + 1] = temp
+        newFinal = "".join(newValue)
+        return newFinal
+    else:
+        return "".join(newValue)
+
