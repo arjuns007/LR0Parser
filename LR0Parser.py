@@ -205,7 +205,7 @@ parsingTableDict = {}
 #-------------------- Basic Construction Done -------------------
 
 #String Parsing
-for i in range(len(list)):
+for i in range(len(flag)):
     data = [''] * (len(term) + len(non_term))
     samp = {}
 
@@ -219,7 +219,7 @@ for i in range(len(list)):
 
     except Exception:
         if i != 1:
-            s = list(list[i][0])
+            s = list(flag[i][0])
             s.remove('.')
             s = "".join(s)
             lst = [i] + ['r' + str(productionNum[s])] * len(term)
