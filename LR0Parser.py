@@ -74,8 +74,17 @@ def gotoFucntion(var1):
     else:
         return var1
 
-def Terminals(gram):
-    return
+def Terminals(inputTerminal):
+    terminalSet = set()
+    for p in inputTerminal:
+        x1 = p.split('->')
+        for t in x1[1].strip():
+            if not t.isupper() and t != '.' and t != '':
+                terminalSet.add(t)
+
+    terminalSet.add('$')
+
+    return terminalSet
 
 #function to store non terminals
 def nonTerminals(gram):
