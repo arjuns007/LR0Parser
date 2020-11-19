@@ -209,7 +209,7 @@ for i in range(len(list)):
     data = [''] * (len(term) + len(non_term))
     samp = {}
 
-    # Action
+    #Action
     try:
         for j in dfa[i]:
             if not j.isupper() and j != '' and j != '.':
@@ -231,6 +231,7 @@ for i in range(len(list)):
             lst = [i] + [''] * (len(term) + len(non_term))
             lst[-1] = 'Accept'
             parsingTable.append(lst)
+    #goto
     try:
         for j in dfa[i]:
             if j.isupper():
