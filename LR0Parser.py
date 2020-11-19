@@ -112,6 +112,7 @@ productionRules.insert(0, "X->.S")
 print("---------------------------------------------------------------")
 print("Augmented Grammar")
 print(productionRules)
+time.sleep(2)
 
 productionNum = {}
 for i in range(1, len(productionRules)):
@@ -154,7 +155,7 @@ print("Total States: ", len(flag))
 for i in range(len(flag)):
     print(i, ":", flag[i])
 print("---------------------------------------------------------------")
-
+time.sleep(2)
 
 #Implementing DFA for LR0 Parsing
 
@@ -174,6 +175,7 @@ for i in range(len(flag)):
             dfa[i] = samp
 
 print(dfa)
+time.sleep(2)
 
 #DFA Implemented
 
@@ -242,10 +244,10 @@ for i in range(len(flag)):
 #printing final table
 final_table = tt.to_string(data=parsingTable, header=header + header2, style=tt.styles.ascii_thin_double, padding=(0, 1))
 
+time.sleep(2)
 print("\n")
 print(final_table)
 print("\n")
-
 
 
 #Parsing the String
