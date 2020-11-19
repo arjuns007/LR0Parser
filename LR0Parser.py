@@ -23,16 +23,6 @@ def compressedName(name: str):
         comp += r + str(compResult[r])
     return comp
 
-#Function to Save file
-def saveFile(final_string, grammar, name):
-    directory = os.path.dirname("stringParsing/" + str(grammar) + "/")
-    if not os.path.exists(directory):
-        print("Creating this Director......")
-        os.makedirs(directory)
-
-    with open("stringParsing/{0}/{1}.txt".format(grammar, name), 'w') as fileParsing:
-        fileParsing.write(final_string)
-
 #Function to find closure
 def findClosure(gram):
     flag = [gram]
@@ -336,6 +326,7 @@ try:
 
     else:
         print("The string {0} is not parsable!".format(string))
+
 except Exception:
     print("Invalid string entered!")
 
