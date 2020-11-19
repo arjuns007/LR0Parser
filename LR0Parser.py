@@ -204,7 +204,7 @@ parsingTable.append([''] + term + non_term)
 parsingTableDict = {}
 #-------------------- Basic Construction Done -------------------
 
-#String Parsing
+
 for i in range(len(flag)):
     data = [''] * (len(term) + len(non_term))
     samp = {}
@@ -257,6 +257,72 @@ print(final_table)
 print("\n")
 
 
+
+#Parsing the String
+string = input("Enter the string to be parsed: ")
+string += '$'
+print("\n")
+
+stack = [0]
+pointer = 0
+
+header  = ['Process', 'Look Ahead', 'Symbol', 'Stack']
+data = []
+
+i = 0
+accepted = False
+while True:
+    try:
+        try:
+            productions = dfa[stack[-1]]
+            productionsNumber = productions[string[i]]
+        except Exception:
+            productionsNumber = None
+
+        try:
+            tab = parsingTableDict[stack[-1]]
+            tabCheck = tab[string[i]]  # S or r
+        except Exception:
+            tab = parsingTableDict[stack[-2]]
+            tabCheck = tab[stack[-1]]  # S or r
+
+        if tabCheck == 'Accept':
+            data.append(['Action({0}, {1}) = {2}'.format(stack[-1], string[i], tabCheck), i, string[i], str(stack)])
+            accepted = True
+            break
+        else:
+            if tabCheck[0] == 'S' and not str(stack[-1]).isupper():
+                lst = ['Action({0}, {1}) = {2}'.format(stack[-1], string[i], tabCheck), i, string[i]]
+                stack.append(string[i])
+                stack.append(productionsNumber)
+                lst.append(str(stack))
+                data.append(lst)
+                i += 1
+            elif tabCheck[0] == 'r':
+                lst = ['Action({0}, {1}) = {2}'.format(stack[-1], string[i], tabCheck), i, string[i]]
+                x = None
+                for i1 in productionNum:
+                    if productionNum[i1] == int(tabCheck[1]):
+                        x = i1
+                        break
+
+                length = 2 * (len(x.split('->')[1]))
+                for _ in range(length):
+                    stack.pop()
+
+                stack.append(x[0])
+                lst.append(str(stack))
+                data.append(lst)
+
+            else:
+                lst = ['goto({0}, {1}) = {2}'.format(stack[-2], stack[-1], tabCheck), i, string[i]]
+                stack.append(int(tabCheck))
+                lst.append(str(stack))
+                data.append(lst)
+
+    except Exception:
+        accepted = False
+        break
 
 
 
