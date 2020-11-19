@@ -117,3 +117,7 @@ productionRules.insert(0, "X->.S")
 print("---------------------------------------------------------------")
 print("Augmented Grammar")
 print(productionRules)
+
+productionNum = {}
+for i in range(1, len(productionRules)):
+    productionNum[str(productionRules[i])] = i
