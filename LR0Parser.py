@@ -154,3 +154,8 @@ for item in flag:
             if item[j].index(".") != len(item[j]) - 1:
                 flag.append(gotoFucntion(item[j]))
 
+print("---------------------------------------------------------------")
+print("Total States: ", len(flag))
+for i in range(len(flag)):
+    print(i, ":", flag[i])
+print("---------------------------------------------------------------")
