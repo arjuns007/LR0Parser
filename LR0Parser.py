@@ -97,7 +97,12 @@ def nonTerminals(gram):
     return terms
 
 def getList(graph, state):
-    return
+    finalList = []
+    for g in graph:
+        if int(g.split()[0]) == state:
+            finalList.append(g)
+
+    return finalList
 
 
 productionRules = []
