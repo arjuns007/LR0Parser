@@ -325,6 +325,19 @@ while True:
         break
 
 
+try:
+    parsing_table = tt.to_string(data=data, header=header, style=tt.styles.ascii_thin_double, padding=(0, 1))
+
+    if accepted:
+        string = string[:-1]
+
+        print(parsing_table)
+        print("The string {0} is parsable!".format(string))
+
+    else:
+        print("The string {0} is not parsable!".format(string))
+except Exception:
+    print("Invalid string entered!")
 
 
 
