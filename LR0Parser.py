@@ -106,3 +106,14 @@ def getList(graph, state):
 
 
 productionRules = []
+itemSet = []
+flag = []
+
+with open("input.txt", 'r') as fp:
+    for i in fp.readlines():
+        productionRules.append(i.strip())
+
+productionRules.insert(0, "X->.S")
+print("---------------------------------------------------------------")
+print("Augmented Grammar")
+print(productionRules)
