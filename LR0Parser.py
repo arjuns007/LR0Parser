@@ -231,6 +231,22 @@ for i in range(len(list)):
             lst = [i] + [''] * (len(term) + len(non_term))
             lst[-1] = 'Accept'
             parsingTable.append(lst)
+    try:
+        for j in dfa[i]:
+            if j.isupper():
+                ind = non_term.index(j)
+                data[len(term) + ind] = dfa[i][j]
+
+                samp[j] = str(dfa[i][j])
+
+        parsingTable.append([i] + data)
+    except Exception:
+        pass
+
+    if samp == {}:
+        parsingTableDict[i] = {'$': 'Accept'}
+    else:
+        parsingTableDict[i] = samp
 
 
 
