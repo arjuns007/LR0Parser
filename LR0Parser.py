@@ -249,6 +249,19 @@ for i in range(len(list)):
     else:
         parsingTableDict[i] = samp
 
+#printing final table
+final_table = tt.to_string(data=parsingTable, header=header + header2, style=tt.styles.ascii_thin_double, padding=(0, 1))
+
+print("\n")
+print(final_table)
+print("\n")
+
+
+
+
+
+
+
 
 
 #Program end
