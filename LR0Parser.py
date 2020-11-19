@@ -1,4 +1,4 @@
-#Importing Necessary Libraries
+#---------------- Importing Necessary Libraries ----------------
 
 import os
 import time
@@ -6,9 +6,12 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
+#----------------Done Importing Necessary Libraries ----------------
+
 title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
 print(title)
 
+#----------------Defining Important Functions ----------------
 def addDot(dot):
     addDotVar = dot.replace("->", "->.")
     return addDotVar
@@ -103,6 +106,8 @@ def getList(graph, state):
             finalList.append(g)
 
     return finalList
+
+#----------------Done Defining Important Functions ----------------
 
 
 productionRules = []
