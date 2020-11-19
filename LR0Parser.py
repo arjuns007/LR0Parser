@@ -125,3 +125,32 @@ for i in range(1, len(productionRules)):
 appendingClosure = findClosure("X->.S")
 itemSet.append(appendingClosure)
 
+stateNumbers = {}
+dfaRules = {}
+numberofItems = 0
+
+while True:
+    if len(itemSet) == 0:
+        break
+
+    jk = itemSet.pop(0)
+    kl = jk
+    flag.append(jk)
+    stateNumbers[str(jk)] = numberofItems
+    numberofItems += 1
+
+    if len(jk) > 1:
+        for item in jk:
+            jl = gotoFucntion(item)
+            if jl not in itemSet and jl != kl:
+                itemSet.append(jl)
+                dfaRules[str(stateNumbers[str(jk)]) + " " + str(item)] = jl
+            else:
+                dfaRules[str(stateNumbers[str(jk)]) + " " + str(item)] = jl
+
+for item in flag:
+    for j in range(len(item)):
+        if gotoFucntion(item[j]) not in flag:
+            if item[j].index(".") != len(item[j]) - 1:
+                flag.append(gotoFucntion(item[j]))
+
