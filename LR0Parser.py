@@ -59,7 +59,7 @@ def swapValues(newValue, posValue):
         return "".join(newValue)
 
 #go to function
-def gotoFucntion(var1):
+def gotoFunction(var1):
     arr = []
     pos = var1.index(".")
     if pos != len(var1) - 1:
@@ -114,14 +114,47 @@ with open("input.txt", 'r') as fp:
         productionRules.append(i.strip())
 
 productionRules.insert(0, "X->.S")
-print("---------------------------------------------------------------")
+
 print("Augmented Grammar")
 print(productionRules)
 
-productionNum = {}
+prod_num = {}
 for i in range(1, len(productionRules)):
-    productionNum[str(productionRules[i])] = i
+    prod_num[str(productionRules[i])] = i
 
-appendingClosure = findClosure("X->.S")
-itemSet.append(appendingClosure)
+j = findClosure("X->.S")
+itemSet.append(j)
 
+
+state_numbers = {}
+dfa_prod = {}
+items = 0
+while True:
+    if len(itemSet) == 0:
+        break
+
+    jk = itemSet.pop(0)
+    kl = jk
+    flag.append(jk)
+    state_numbers[str(jk)] = items
+    items += 1
+
+    if len(jk) > 1:
+        for item in jk:
+            jl = gotoFunction(item)
+            if jl not in itemSet and jl != kl:
+                itemSet.append(jl)
+                dfa_prod[str(state_numbers[str(jk)]) + " " + str(item)] = jl
+            else:
+                dfa_prod[str(state_numbers[str(jk)]) + " " + str(item)] = jl
+
+for item in flag:
+    for j in range(len(item)):
+        if gotoFunction(item[j]) not in flag:
+            if item[j].index(".") != len(item[j]) - 1:
+                flag.append(gotoFunction(item[j]))
+
+
+print("Total States: ", len(flag))
+for i in range(len(flag)):
+    print(i, ":", flag[i])
