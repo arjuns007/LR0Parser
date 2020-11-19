@@ -161,7 +161,7 @@ for i in range(len(flag)):
 print("---------------------------------------------------------------")
 
 
-#implementing DFA for LR0 Parsing
+#Implementing DFA for LR0 Parsing
 
 dfa = {}
 for i in range(len(flag)):
@@ -182,14 +182,22 @@ print(dfa)
 
 #DFA Implemented
 
-
-
-
-
-
 #Implement Parsing Table
 
+#-------------------- Constructing Basic Table -------------------
+parsingTable = []
+term = sorted(list(Terminals(productionRules)))
+header = [''] * (len(term) + 1)
+header[(len(term) + 1) // 2] = 'Action'
 
+non_term = sorted(list(nonTerminals(productionRules)))
+header2 = [''] * len(non_term)
+header2[(len(non_term)) // 2] = 'Goto'
+
+parsingTable.append([''] + term + non_term)
+
+parsingTableDict = {}
+#-------------------- Basic Construction Done -------------------
 
 #String Parsing
 
