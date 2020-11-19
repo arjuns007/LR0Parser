@@ -205,6 +205,32 @@ parsingTableDict = {}
 #-------------------- Basic Construction Done -------------------
 
 #String Parsing
+for i in range(len(list)):
+    data = [''] * (len(term) + len(non_term))
+    samp = {}
+
+    # Action
+    try:
+        for j in dfa[i]:
+            if not j.isupper() and j != '' and j != '.':
+                ind = term.index(j)
+                data[ind] = 'S' + str(dfa[i][j])
+                samp[term[ind]] = 'S' + str(dfa[i][j])
+
+    except Exception:
+        if i != 1:
+            s = list(list[i][0])
+            s.remove('.')
+            s = "".join(s)
+            lst = [i] + ['r' + str(productionNum[s])] * len(term)
+            lst += [''] * len(non_term)
+            parsingTable.append(lst)
+            for j in term:
+                samp[j] = 'r' + str(productionNum[s])
+        else:
+            lst = [i] + [''] * (len(term) + len(non_term))
+            lst[-1] = 'Accept'
+            parsingTable.append(lst)
 
 
 
