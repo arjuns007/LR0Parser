@@ -159,3 +159,40 @@ print("Total States: ", len(flag))
 for i in range(len(flag)):
     print(i, ":", flag[i])
 print("---------------------------------------------------------------")
+
+
+#implementing DFA for LR0 Parsing
+
+dfa = {}
+for i in range(len(flag)):
+    if i in dfa:
+        pass
+    else:
+        lst = getList(dfaRules, i)
+        samp = {}
+        for j in lst:
+            s = j.split()[1].split('->')[1]
+            search = s[s.index('.') + 1]
+            samp[search] = stateNumbers[str(dfaRules[j])]
+
+        if samp != {}:
+            dfa[i] = samp
+
+print(dfa)
+
+#DFA Implemented
+
+
+
+
+
+
+#Implement Parsing Table
+
+
+
+#String Parsing
+
+
+
+#Program end
