@@ -84,6 +84,8 @@ Make sure all the intermediate components should be visible while simulation and
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@abhinavvx](https://github.com/abhinavvx) 
+- [@arjuns007](https://github.com/arjuns007) 
+
 
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
