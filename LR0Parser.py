@@ -6,22 +6,15 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
+from addDot import addDot
+
+
 #----------------Done Importing Necessary Libraries ----------------
+
 
 title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
 print(title)
 
-#----------------Defining Important Functions ----------------
-def addDot(dot):
-    addDotVar = dot.replace("->", "->.")
-    return addDotVar
-
-def compressedName(name: str):
-    compResult = Counter(name)
-    comp = ''
-    for r in compResult:
-        comp += r + str(compResult[r])
-    return comp
 
 #Function to find closure
 def findClosure(gram):
@@ -331,9 +324,6 @@ try:
 
 except Exception:
     print("Invalid string entered!")
-
-
-
 
 
 #Program end
