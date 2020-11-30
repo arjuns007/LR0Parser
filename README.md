@@ -37,7 +37,7 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
-## 🧐 Problem Statement: #thispandemic <a name = "problem_statement"></a>
+## 🧐 Problem Statement: <a name = "problem_statement"></a>
 Simulate the LR(0) parsing algorithm.  
 This include, DFA design, parsing table creation and finally the parsing of user-defined string. 
 While parsing the step by step parsing should be demonstrated. 
