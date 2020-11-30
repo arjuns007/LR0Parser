@@ -6,7 +6,6 @@ from collections import Counter
 import pyfiglet
 import termtables as tt
 
-from addDot import addDot
 
 
 #----------------Done Importing Necessary Libraries ----------------
@@ -15,6 +14,10 @@ from addDot import addDot
 title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
 print(title)
 
+
+def addDot(dot):
+    addDotVar = dot.replace("->", "->.")
+    return addDotVar
 
 #Function to find closure
 def findClosure(gram):
