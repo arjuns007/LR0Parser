@@ -75,12 +75,8 @@ Make sure all the intermediate components should be visible while simulation and
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - Programming Language - [Python](https://www.python.org/)
        
-- Frameworks & Libraries - [Yolo](https://pjreddie.com/darknet/yolo/)
-                         - [OpenCV](https://opencv.org/)
-                         - [TensorFlow](https://www.tensorflow.org/)
-                         - [Flutter](https://flutter.dev/)
-                         - [Dlib](https://pypi.org/project/dlib/)
-
+- Frameworks & Libraries - [TermTables](https://pypi.org/project/termtables/)
+                        
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@abhinavvx](https://github.com/abhinavvx) 
