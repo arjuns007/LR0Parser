@@ -1,16 +1,23 @@
 #---------------- Importing Necessary Libraries ----------------
+
+import os
+import time
+from collections import Counter
+import pyfiglet
 import termtables as tt
 
-#----------------Done Importing Necessary Library ----------------
 
 
-print("------------LR(0) PARSING-------------")
+#----------------Done Importing Necessary Libraries ----------------
 
-#----------------Defining Important Functions ----------------
+
+title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
+print(title)
+
+
 def addDot(dot):
     addDotVar = dot.replace("->", "->.")
     return addDotVar
-
 
 #Function to find closure
 def findClosure(gram):
@@ -101,6 +108,7 @@ productionRules.insert(0, "X->.S")
 print("---------------------------------------------------------------")
 print("Augmented Grammar")
 print(productionRules)
+time.sleep(2)
 
 productionNum = {}
 for i in range(1, len(productionRules)):
@@ -143,7 +151,7 @@ print("Total States: ", len(flag))
 for i in range(len(flag)):
     print(i, ":", flag[i])
 print("---------------------------------------------------------------")
-
+time.sleep(2)
 
 #Implementing DFA for LR0 Parsing
 
@@ -163,6 +171,7 @@ for i in range(len(flag)):
             dfa[i] = samp
 
 print(dfa)
+time.sleep(2)
 
 #DFA Implemented
 
@@ -231,10 +240,10 @@ for i in range(len(flag)):
 #printing final table
 final_table = tt.to_string(data=parsingTable, header=header + header2, style=tt.styles.ascii_thin_double, padding=(0, 1))
 
+time.sleep(2)
 print("\n")
 print(final_table)
 print("\n")
-
 
 
 #Parsing the String
@@ -315,11 +324,9 @@ try:
 
     else:
         print("The string {0} is not parsable!".format(string))
+
 except Exception:
     print("Invalid string entered!")
-
-
-
 
 
 #Program end
