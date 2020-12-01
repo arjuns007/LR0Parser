@@ -75,7 +75,7 @@ Make sure all the intermediate components should be visible while simulation and
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - Programming Language - [Python](https://www.python.org/)
        
-- Frameworks & Libraries - [TermTables](https://pypi.org/project/termtables/)
+- Frameworks & Libraries - [TermTables](https://pypi.org/project/termtables/) [PyFiglet] (https://pypi.org/project/pyfiglet/) [Time] (https://pypi.org/project/time/)
                         
 
 ## ✍️ Authors <a name = "authors"></a>
