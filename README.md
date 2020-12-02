@@ -80,8 +80,6 @@ Make sure all the intermediate components should be visible while simulation and
 - [@viragsharma]
 
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
-
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 Thankyou to our Prof. Dr. Kumar Nitesh for constantly supporting us in our endeavours.
