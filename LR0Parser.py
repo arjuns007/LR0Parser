@@ -1,4 +1,4 @@
-#---------------- Importing Necessary Libraries ----------------
+
 
 import os
 import time
@@ -8,7 +8,7 @@ import termtables as tt
 
 
 
-#----------------Done Importing Necessary Libraries ----------------
+
 
 
 title = pyfiglet.figlet_format("LR (0) Parsing", font="digital")
@@ -35,7 +35,7 @@ def findClosure(gram):
 
     return flag
 
-#Fucntion to Swap Values
+
 def swapValues(newValue, posValue):
     newValue = list(newValue)
     temp = newValue[posValue]
@@ -47,7 +47,7 @@ def swapValues(newValue, posValue):
     else:
         return "".join(newValue)
 
-#go to function
+
 def gotoFucntion(var1):
     arr = []
     pos = var1.index(".")
@@ -75,7 +75,6 @@ def Terminals(inputTerminal):
 
     return terminalSet
 
-#function to store non terminals
 def nonTerminals(gram):
     terms = set()
     for p in gram:
@@ -93,7 +92,7 @@ def getList(graph, state):
 
     return finalList
 
-#----------------Done Defining Important Functions ----------------
+
 
 
 productionRules = []
@@ -153,7 +152,7 @@ for i in range(len(flag)):
 print("---------------------------------------------------------------")
 time.sleep(2)
 
-#Implementing DFA for LR0 Parsing
+
 
 dfa = {}
 for i in range(len(flag)):
@@ -173,11 +172,7 @@ for i in range(len(flag)):
 print(dfa)
 time.sleep(2)
 
-#DFA Implemented
 
-#Implement Parsing Table
-
-#-------------------- Constructing Basic Table -------------------
 parsingTable = []
 term = sorted(list(Terminals(productionRules)))
 header = [''] * (len(term) + 1)
@@ -190,7 +185,7 @@ header2[(len(non_term)) // 2] = 'Goto'
 parsingTable.append([''] + term + non_term)
 
 parsingTableDict = {}
-#-------------------- Basic Construction Done -------------------
+
 
 
 for i in range(len(flag)):
@@ -219,7 +214,7 @@ for i in range(len(flag)):
             lst = [i] + [''] * (len(term) + len(non_term))
             lst[-1] = 'Accept'
             parsingTable.append(lst)
-    #goto
+    
     try:
         for j in dfa[i]:
             if j.isupper():
@@ -237,7 +232,7 @@ for i in range(len(flag)):
     else:
         parsingTableDict[i] = samp
 
-#printing final table
+
 final_table = tt.to_string(data=parsingTable, header=header + header2, style=tt.styles.ascii_thin_double, padding=(0, 1))
 
 time.sleep(2)
@@ -246,7 +241,7 @@ print(final_table)
 print("\n")
 
 
-#Parsing the String
+
 string = input("Enter the string to be parsed: ")
 string += '$'
 print("\n")
@@ -329,4 +324,3 @@ except Exception:
     print("Invalid string entered!")
 
 
-#Program end
