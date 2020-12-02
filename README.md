@@ -27,7 +27,6 @@
 
 ## 📝 Table of Contents
 - [Problem Statement](#problem_statement)
-- [Idea / Solution](#idea)
 - [Future Scope](#future_scope)
 - [Setting up a realistic local environment](#getting_started)
 - [Usage](#usage)
@@ -42,12 +41,6 @@ This include, DFA design, parsing table creation and finally the parsing of user
 While parsing the step by step parsing should be demonstrated. 
 Grammar should be read from a text file and impose all necessary constraints on the input. 
 Make sure all the intermediate components should be visible while simulation and keep the program as interactive as possible.
-
-
-
-## 💡 Idea / Solution <a name = "idea"></a>
-
-
 
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
