@@ -244,7 +244,7 @@ print("\n")
 print(final_table)
 print("\n")
 
-
+#---------------- String Parsing ----------------
 
 string = input("Enter the string to be parsed: ")
 string += '$'
