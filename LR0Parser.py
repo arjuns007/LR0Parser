@@ -35,7 +35,7 @@ def findClosure(gram):
 
     return flag
 
-
+#---------------- Implementing Functions ----------------
 def swapValues(newValue, posValue):
     newValue = list(newValue)
     temp = newValue[posValue]
