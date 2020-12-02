@@ -91,6 +91,7 @@ the list of [contributors](https://github.com/kylelobo/The-Documentation-Compend
 who participated in this project.
 
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
+Thankyou to our Prof. Dr. Kumar Nitesh for constantly supporting us in our endeavours.
 
 
 ## 🎉 Badges <a name = "badges"></a>
