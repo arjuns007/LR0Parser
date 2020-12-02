@@ -51,23 +51,27 @@ Make sure all the intermediate components should be visible while simulation and
 
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
-
+- Add Graphical DFA Implementation
+- WebApp for LR0 Parser
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 - To be Updated soon!
  See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-
+- Pyfiglet
+- Termtables
+- Input Grammar
+- Input String
 
 
 ### Installing
-- To be Updated soon!
+- Install the Dependencies
 
 
 ## 🎈 Usage <a name="usage"></a>
-- To be Updated soon!
-
+- Specify the Input Grammar in Input.txt
+- Run the Python file
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - Programming Language - [Python](https://www.python.org/)
