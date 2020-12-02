@@ -176,7 +176,7 @@ for i in range(len(flag)):
 print(dfa)
 time.sleep(2)
 
-
+#---------------- Implementing Parsing Table ----------------
 parsingTable = []
 term = sorted(list(Terminals(productionRules)))
 header = [''] * (len(term) + 1)
