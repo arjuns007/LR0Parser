@@ -86,10 +86,6 @@ Make sure all the intermediate components should be visible while simulation and
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
 
 
-See also all 
-the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) 
-who participated in this project.
-
 ## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 Thankyou to our Prof. Dr. Kumar Nitesh for constantly supporting us in our endeavours.
 
