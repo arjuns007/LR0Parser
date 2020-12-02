@@ -118,6 +118,8 @@ for i in range(1, len(productionRules)):
 appendingClosure = findClosure("X->.S")
 itemSet.append(appendingClosure)
 
+#---------------- Implementing DFA ----------------
+
 stateNumbers = {}
 dfaRules = {}
 numberofItems = 0
