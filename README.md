@@ -82,8 +82,8 @@ Make sure all the intermediate components should be visible while simulation and
 - [@abhinavvx](https://github.com/abhinavvx) 
 - [@arjuns007](https://github.com/arjuns007) 
 - [@minhas-221](https://github.com/minhas-221)
+- [@prerana-b](https://github.com/prerana-b)
 - [@viragsharma]
-- [@preranaBhasein]
 
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
