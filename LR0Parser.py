@@ -113,6 +113,8 @@ productionNum = {}
 for i in range(1, len(productionRules)):
     productionNum[str(productionRules[i])] = i
 
+ #---------------- Adding Closure ----------------
+    
 appendingClosure = findClosure("X->.S")
 itemSet.append(appendingClosure)
 
